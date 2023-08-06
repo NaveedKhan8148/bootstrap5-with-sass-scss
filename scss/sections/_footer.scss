@@ -1,0 +1,113 @@
+@use '../custom' as *;
+@use '../components/mixin' as *;
+
+.footer{
+    // padding: 1rem;
+    background: $footer;
+}
+
+.contact-box{
+    position: relative;
+
+
+    &__icon{
+        width: 2rem;
+        stroke: $primary;
+        padding-top: 0.5rem;
+        @include media-breakpoint-up(sm){
+            width: 4rem;
+        }
+
+    }
+   
+
+    &__info{
+       padding: 0.4rem;
+
+        a{
+            font-size: 1rem;
+              color: $white;
+             text-decoration: none;
+             @include media-breakpoint-up(sm){
+                font-size: 1.4rem;
+            }
+
+        }
+        p{
+             font-size: 0.8rem;
+             color: $gray-600;
+             text-decoration: none;
+             @include media-breakpoint-up(sm){
+                font-size: 1rem;
+            }
+
+        }
+    }
+}
+.footer-sm{
+    width: 100% !important;
+    a{
+        color: $white;
+        i{
+            font-size: 1rem;
+            margin-left: 1rem;
+            @include media-breakpoint-up(sm){
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+
+.companies-list{
+    display: block;
+    list-style-type: none;
+    position: relative;
+
+    li{
+        margin-bottom: 0.5rem;
+        text-decoration: none;
+
+        a{
+            color: $white;
+            text-decoration: none;
+            &:hover{
+                color: $primary;
+            }
+        }
+    }
+}
+
+.footer-bottom{
+
+    background-color: $black;
+    &__copyright{
+        color: $gray-600;
+        font-weight: 400;
+        a{
+            color: $gray-300;
+            text-decoration: none;
+         &:hover{
+            color: $primary;
+            text-decoration: underline;
+
+         }   
+        }
+    }
+}
+
+
+.back-to-top{
+    position: fixed;
+    background: $primary;
+    width: 3rem;
+    height: 3rem;
+    right: 1.857rem;
+    bottom: 1.857rem;
+    z-index: 9999;
+    i{
+        color: $white;
+        font-size: 1rem;
+        @include absoluteCenter
+    }
+}
